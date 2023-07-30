@@ -58,13 +58,13 @@
                 </svg>
               </div>
               <div class="ml-3">
-                <h3 class="text-sm font-medium text-red-800">Tous les champs doivent être remplis</h3>
+                <h3  class="text-sm font-medium text-red-800">Tous les champs doivent être remplis</h3>
               </div>
             </div>
           </div>          
         </div>
         <!-- FORM  -->
-        <form id ="envoyer" action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+        <form id="myForm" action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
           <div>
             <label for="first-name" class="block text-sm font-medium text-warm-gray-900">Prénom</label>
             <div class="mt-1">
@@ -96,6 +96,31 @@
     </div>
   </div>
 </div>
-<script src="script.js"></script>
+
+  
+<script>
+    let myForm = document.getElementById('myForm');
+    myForm.addEventListener('submit', function(e) {
+      
+     let myInput = document.getElementById('first-name'); 
+     if (myInput.value.trim() == "") {
+        let myError = document.getElementById("error-message");
+        //myError = 
+        e.preventDefault();}  
+      let myInput2 =document.getElementById('last-name');
+      if (myInput2.value.trim() == "") {
+      //let myError = document.getElementById('error-message');
+      //myError.innerHTML = "Le champs est requis."
+      e.preventDefault();}
+      let myTextarea = document.getElementById('message');
+      if (myTextarea.value.trim() == "") {
+        //let myError = document.getElementById('error-message');
+        //myError.innerHTML = "Le champs est requis"
+        e.preventDefault();
+      }
+        }
+        );
+
+  </script>  
 </body>
 </html>
