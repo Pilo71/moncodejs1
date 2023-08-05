@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="py-10 lg:col-span-2 xl:py-12">
-        <h3 class="text-lg font-medium text-warm-gray-900">Écrire un commentaire</h3>
+        <h3 id ="alert"class="text-lg font-medium text-warm-gray-900">Écrire un commentaire</h3>
         <!-- ALERT MESSAGE -->
         <div id="error-message" style="display: none;" class="mt-4 mx-auto max-w-4xl">        
           <div class="rounded-md bg-red-50 p-4">
@@ -64,7 +64,7 @@
           </div>          
         </div>
         <!-- FORM  -->
-        <form id="myForm" action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+        <form id="myform" action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
           <div>
             <label for="first-name" class="block text-sm font-medium text-warm-gray-900">Prénom</label>
             <div class="mt-1">
@@ -98,29 +98,6 @@
 </div>
 
   
-<script>
-    let myForm = document.getElementById('myForm');
-    myForm.addEventListener('submit', function(e) {
-      
-     let myInput = document.getElementById('first-name'); 
-     if (myInput.value.trim() == "") {
-        let myError = document.getElementById("error-message");
-        //myError = 
-        e.preventDefault();}  
-      let myInput2 =document.getElementById('last-name');
-      if (myInput2.value.trim() == "") {
-      //let myError = document.getElementById('error-message');
-      //myError.innerHTML = "Le champs est requis."
-      e.preventDefault();}
-      let myTextarea = document.getElementById('message');
-      if (myTextarea.value.trim() == "") {
-        //let myError = document.getElementById('error-message');
-        //myError.innerHTML = "Le champs est requis"
-        e.preventDefault();
-      }
-        }
-        );
-
-  </script>  
+<script src="script.js"></script>  
 </body>
 </html>
